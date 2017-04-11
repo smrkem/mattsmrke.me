@@ -1,58 +1,24 @@
-# RoR Docker Template
+# README
 
-## How to use it:
-This uses the latest postgres and the ruby:2.31 images. Pull these down if need be:  
-```
-$ docker pull postgres
-$ docker pull ruby:2.3.1
-```  
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Clone or unzip the repo into a folder with name of the new app.
+Things you may want to cover:
 
-Build the initial rails app on your host using the docker ruby image:  
-```
-$ docker run --rm -it -v $PWD:/appname ruby:2.3.1 bash
-```
-you might need to add user argument on linux: `-u $(id -u):$(id -g)`.  Replace `appname`.
+* Ruby version
 
-And then the usual commands inside the container.
-- `# cd /appname`
-- `# gem install rails`
-- `# rails new . --skip-bundle --skip-test --skip-spring --skip-turbolinks -d postgresql`
+* System dependencies
 
-There should be a new rails app in the folder, with the dockerfiles at the root level of the project.
+* Configuration
 
-Optionally update the gemfile to your preference and pin nokogiri to the version you want (1.7.1 in the repo - change to latest if desired).
+* Database creation
 
-Next update the .env file with your chosen db creds, and update the `config/database.yml` settings:
-```
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: db
-  username: <%= ENV["POSTGRES_USER"] %>
-  password: <%= ENV["POSTGRES_PASSWORD"] %>
+* Database initialization
 
-development:
-  <<: *default
-  database: appname_development
+* How to run the test suite
 
-test:
-  <<: *default
-  database: appname_test
+* Services (job queues, cache servers, search engines, etc.)
 
-production:
-  <<: *default
-  database: appname_production
-  host: <%= ENV["POSTRES_HOST"] %>
-```
-so that it uses the postgres container and environment variables.
+* Deployment instructions
 
-Now run the containers to set up the db and create the intial 'schema.rb'. If this is the first time, they'll get build first which takes a little while.
-```
-docker-compose run --rm app rake db:create db:migrate
-```
-and it should give some successful output, like that it created a couple dbs.
-
-If all that went ok - you can start up the app with `docker-compose up -d` (-d for daemonize in the background) and stop it with `docker-compose stop`.
+* ...
