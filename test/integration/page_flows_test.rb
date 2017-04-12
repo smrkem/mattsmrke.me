@@ -6,8 +6,8 @@ class PageFlowsTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '#site-brand', "mattsmrke"
     assert_select 'div#description'
-    assert_select 'a[href="?"]', '/projects', "My Projects"
-    assert_select 'a[href="?"]', '/courses', "My Courses"
+    assert_select "a[href=\"/projects\"]", "My Projects"
+    assert_select "a[href=\"/courses\"]", '/courses', "My Courses"
   end
 
   test "projects page has a list of projects" do
