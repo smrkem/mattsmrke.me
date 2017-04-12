@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mattsmrke</title>
+    <title>mattsmrke - Web and Application Developer</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="container">
+      <a href="/" id="site-brand">mattsmrke</a>
+      <ul class="social-icons">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </header>
+
+    <section class="container">
+      <%= yield %>
+    </section>
   </body>
 </html>
