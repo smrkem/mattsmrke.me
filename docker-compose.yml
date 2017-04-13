@@ -13,6 +13,7 @@ services:
 
   app:
     build: .
+    user: $UID
     env_file: .env
     volumes:
       - .:/usr/src/app
