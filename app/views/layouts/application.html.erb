@@ -12,8 +12,8 @@
     <header class="container">
       <a href="/" id="site-brand" class="pull-left">mattsmrke</a>
       <ul class="social-icons pull-right">
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">LinkedIn</a></li>
+        <li><a target="_blank" href="https://github.com/smrkem">GitHub</a></li>
+        <li><a target="_blank" href="https://ca.linkedin.com/in/matthew-smrke-55692957">LinkedIn</a></li>
       </ul>
     </header>
 
@@ -21,4 +21,13 @@
       <%= yield %>
     </section>
   </body>
+
+  <footer class="container">
+    <p>Thanks for visiting.</p>
+    <p>&copy; Matt Smrke <%= Time.current.year %></p>
+    <ul class="social-icons">
+      <li><a target="_blank" href="https://github.com/smrkem">GitHub</a></li>
+      <li><a target="_blank" href="https://ca.linkedin.com/in/matthew-smrke-55692957">LinkedIn</a></li>
+    </ul>
+  </footer>
 </html>
