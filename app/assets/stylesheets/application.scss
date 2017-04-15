@@ -7,6 +7,50 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+ body {
+   font-family: 'Roboto', sans-serif;
+   background: #f5f5dc;
+ }
+
+
+ header {
+   margin-bottom: 20px;
+ }
+ header #site-brand {
+   display: block;
+   font-size: 40px;
+   color: #333366;
+ }
+ header #site-brand:hover {
+   text-decoration: none;
+ }
+.social-icons {
+  padding: 0;
+  list-style: none;
+}
+.social-icons li {
+  float: left;
+  margin-right: 10px;
+}
+.social-icons li a {
+  color: transparent;
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+}
+.social-icons .github {
+  background-image: image-url("github-icon.png");
+}
+.social-icons .linkedin {
+  background-image: image-url("linkedin-icon.png");
+}
+
+
+
 .highlighted-tech {
   color: #333366;
   font-size: 110%;
@@ -14,9 +58,55 @@
 }
 
 
-.subject {
+
+
+.courses-heading {
+  border-bottom: 1px solid #333;
+  padding: 5px 0;
+  margin-top: 20px;
+}
+
+.course {
+  @include clearfix;
+
   margin: 10px;
   padding: 10px;
   border: 1px solid #eee;
   border-radius: 5px;
+}
+
+.course .provider {
+  float: left;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  margin-right: 10px;
+  background-size: 50px 50px;
+  color: transparent;
+}
+.provider.udemy {
+  background-image: image-url("udemy.png");
+}
+.provider.edx {
+  background-image: image-url("edx.png");
+}
+
+.course h4 {
+  margin-bottom: 5px;
+}
+
+.course-links {
+  list-style: none;
+}
+.course-links li {
+  float: left;
+  margin-right: 15px;
+}
+
+
+footer {
+  margin-top: 20px;
+}
+.footer-info {
+  padding: 5px;
 }
