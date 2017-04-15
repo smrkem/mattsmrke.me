@@ -10,23 +10,39 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
- body {
-   font-family: 'Roboto', sans-serif;
-   background: #f5f5dc;
- }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  background: #f5f5dc;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+header {
+  margin: 10px 0 30px;
+}
+header #site-brand {
+  display: block;
+  font-size: 4em;
+  line-height: 1.2em;
+  color: #333366;
+}
+header #site-brand:hover {
+  text-decoration: none;
+}
 
 
- header {
-   margin-bottom: 20px;
- }
- header #site-brand {
-   display: block;
-   font-size: 40px;
-   color: #333366;
- }
- header #site-brand:hover {
-   text-decoration: none;
- }
+.page-heading {
+  font-size: 2em;
+}
+.page-subheading {
+  margin-top: 40px;
+  font-size: 1.6em;
+}
+
+
 .social-icons {
   padding: 0;
   list-style: none;
@@ -53,7 +69,7 @@
 
 .highlighted-tech {
   color: #333366;
-  font-size: 110%;
+  font-size: 1.15em;
   font-weight: bold;
 }
 
@@ -61,9 +77,9 @@
 
 
 .courses-heading {
-  border-bottom: 1px solid #333;
-  padding: 5px 0;
+  padding: 5px 0 10px;
   margin-top: 20px;
+  font-size: 1.3em;
 }
 
 .course {
@@ -71,7 +87,7 @@
 
   margin: 10px;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid #aac;
   border-radius: 5px;
 }
 
@@ -104,9 +120,22 @@
 }
 
 
+
+.project {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #aac;
+  border-radius: 5px;
+}
+.project h2 {
+  margin-top: 0;
+}
+
 footer {
   margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #aac;
 }
 .footer-info {
-  padding: 5px;
+  padding-top: 5px;
 }
