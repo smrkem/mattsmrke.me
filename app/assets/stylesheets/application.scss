@@ -4,11 +4,13 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
+$break-small: 768px;
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -23,11 +25,16 @@ p {
 header {
   margin: 10px 0 30px;
 }
+
 header #site-brand {
   display: block;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 1.2em;
   color: #333366;
+
+  @media screen and (min-width: $break-small) {
+    font-size: 4em;
+  }
 }
 header #site-brand:hover {
   text-decoration: none;
@@ -63,6 +70,9 @@ header #site-brand:hover {
 }
 .social-icons .linkedin {
   background-image: image-url("linkedin-icon.png");
+}
+.social-icons .email {
+  background-image: image-url("email-icon.png");
 }
 
 
