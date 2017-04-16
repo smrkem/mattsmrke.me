@@ -21,4 +21,14 @@ class PageFlowsTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'div#courses'
   end
+
+  test "projects page has link to courses" do
+    get '/projects'
+    assert_select "a[href=\"/courses\"]", "My Courses"
+  end
+
+  test "courses page has a link to projects" do
+    get '/courses'
+    assert_select "a[href=\"/projects\"]", "My Projects"
+  end
 end
