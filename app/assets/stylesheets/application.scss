@@ -77,6 +77,27 @@ header #site-brand:hover {
 
 
 
+.modal-header {
+  background: #333;
+}
+.modal-title {
+  color: #fff;
+  float: left;
+  font-size: 1.5em;
+}
+#message-me-body {
+  width: 100%;
+  border: none;
+  height: 50%;
+}
+#message-me-body:focus {
+  border: none;
+  outline: none;
+}
+
+
+
+
 .highlighted-tech {
   color: #333366;
   font-size: 1.15em;

@@ -14,7 +14,9 @@ services:
   app:
     build: .
     user: $UID
-    env_file: .env
+    env_file:
+      - .env
+      - .env.private
     volumes:
       - .:/usr/src/app
     ports:
