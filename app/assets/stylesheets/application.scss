@@ -8,14 +8,28 @@
 @import "bootstrap";
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Signika:600,700');
+@import url('https://fonts.googleapis.com/css?family=Asap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700');
 
 $break-small: 768px;
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 2em;
-  background: #f5f5dc;
+  font-size: 2.2em;
+  background: #7f8c8d;
+  background: gold;
+  font-family: 'Asap', sans-serif;
+  // font-weight: 600;
+  // font-family: 'Merriweather Sans', sans-serif;
+  // color: #f5f5dc;
+}
+
+a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
 }
 
 p {
@@ -31,6 +45,7 @@ header #site-brand {
   font-size: 3em;
   line-height: 1.2em;
   color: #333366;
+  text-decoration: none;
 
   @media screen and (min-width: $break-small) {
     font-size: 4em;
@@ -59,22 +74,20 @@ header #site-brand:hover {
   margin-right: 10px;
 }
 .social-icons li a {
-  color: transparent;
-  display: block;
-  height: 30px;
-  width: 30px;
-  background-size: 30px 30px;
+  color: #333366;
+  font-size: 1.2em;
 }
-.social-icons .github {
-  background-image: image-url("github-icon.png");
+.social-icons li a.github {
+  color: #000;
 }
-.social-icons .linkedin {
-  background-image: image-url("linkedin-icon.png");
+.social-icons li a.linkedin {
+  color: #0077b5;
 }
-.social-icons .email {
-  background-image: image-url("email-icon.png");
+#message-me {
+  height: 32px;
+  margin-top: 4px;
+  margin-right: 15px;
 }
-
 
 
 .modal-header {
@@ -102,6 +115,8 @@ header #site-brand:hover {
   color: #333366;
   font-size: 1.15em;
   font-weight: bold;
+  // color: #f1c40f;
+  // font-size: 1.1em;
 }
 
 
@@ -118,8 +133,9 @@ header #site-brand:hover {
 
   margin: 10px;
   padding: 10px;
-  border: 1px solid #aac;
-  border-radius: 5px;
+  border: 1px solid #999;
+  border-left: none;
+  border-right: none;
 }
 
 .course .provider {
@@ -159,7 +175,8 @@ header #site-brand:hover {
   margin: 10px;
   padding: 10px;
   border: 1px solid #aac;
-  border-radius: 5px;
+  border-left: none;
+  border-right: none;
 }
 .project h2 {
   margin-top: 0;

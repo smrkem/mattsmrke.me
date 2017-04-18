@@ -5,13 +5,14 @@
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
     <header class="container">
-      <a href="/" id="site-brand">mattsmrke</a>
+      <a href="/" id="site-brand">matt smrke</a>
       <%= render partial: 'shared/social', locals: { } %>
     </header>
 
@@ -25,7 +26,7 @@
     <p class="footer-info pull-left">&copy; Matt Smrke <%= Time.current.year %></p>
     <%= render partial: 'shared/social', locals: { css_class: "pull-right"} %>
 
-    <button type="button" class="pull-right btn btn-primary" id="message-me" data-toggle="modal" data-target="#messageMeModal">Message</button>
+    <button type="button" class="pull-right btn btn-primary" id="message-me" data-toggle="modal" data-target="#messageMeModal">Message Me</button>
   </footer>
 
   <%= render 'shared/message_me_modal' %>
