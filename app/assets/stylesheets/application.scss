@@ -10,18 +10,26 @@
 
 $break-small: 768px;
 
+$bg-color: #7f8c8d;
+
+$highlight-color: #ffd700;
+$link-color: #dead23;
+
 body {
   font-size: 2.2em;
-  background: #7f8c8d;
-  background: gold;
+  background: $bg-color;
   font-family: 'Asap', sans-serif;
 }
 
+a:hover,
+a:active,
+a.visited,
 a {
-  text-decoration: underline;
+  text-decoration: none;
+  color: $link-color;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 p {
@@ -36,7 +44,7 @@ header #site-brand {
   display: block;
   font-size: 2.6em;
   line-height: 1.2em;
-  color: #333366;
+  color: $highlight-color;
   text-decoration: none;
 
   @media screen and (min-width: $break-small) {
@@ -76,12 +84,13 @@ footer .social-icons li a {
   color: #000;
 }
 .social-icons li a.linkedin {
-  color: #0077b5;
+  color: #003699;
 }
 #message-me {
   height: 32px;
   margin-top: 4px;
   margin-right: 15px;
+  border-color: #204d74;
   display: none;
 
   @media screen and (min-width: $break-small) {
@@ -94,7 +103,7 @@ footer .social-icons li a {
   background: #333;
 }
 .modal-title {
-  color: #fff;
+  color: $highlight-color;
   float: left;
   font-size: 1.5em;
 }
@@ -112,7 +121,7 @@ footer .social-icons li a {
 
 
 .highlighted-tech {
-  color: #333366;
+  color: $highlight-color;
   font-size: 1.15em;
   font-weight: bold;
 }
