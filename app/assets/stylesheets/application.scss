@@ -10,10 +10,10 @@
 
 $break-small: 768px;
 
-$bg-color: #7f8c8d;
+$bg-color: #a9a9a9;
 
-$highlight-color: #ffd700;
-$link-color: #dead23;
+$highlight-color: #ffc800;
+$link-color: #0077b5;
 
 body {
   font-size: 2.2em;
@@ -85,6 +85,7 @@ footer .social-icons li a {
 }
 .social-icons li a.linkedin {
   color: #003699;
+  color: #0077b5;
 }
 #message-me {
   height: 32px;
