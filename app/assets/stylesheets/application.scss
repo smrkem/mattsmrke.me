@@ -10,26 +10,27 @@
 
 $break-small: 768px;
 
-$bg-color: #a9a9a9;
+$bg-color: #824282;
 
 $highlight-color: #ffc800;
-$link-color: #0077b5;
+$link-color: #fff;
 
 body {
   font-size: 2.2em;
   background: $bg-color;
   font-family: 'Asap', sans-serif;
+  color: #fff;
 }
 
 a:hover,
 a:active,
 a.visited,
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: $link-color;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 p {
@@ -74,7 +75,7 @@ header #site-brand:hover {
   margin-right: 10px;
 }
 .social-icons li a {
-  color: #333366;
+  color: #000;
   font-size: 1.2em;
 }
 footer .social-icons li a {
@@ -84,8 +85,7 @@ footer .social-icons li a {
   color: #000;
 }
 .social-icons li a.linkedin {
-  color: #003699;
-  color: #0077b5;
+  color: #000;
 }
 #message-me {
   height: 32px;
@@ -93,6 +93,8 @@ footer .social-icons li a {
   margin-right: 15px;
   border-color: #204d74;
   display: none;
+  background: #222;
+  color: $highlight-color;
 
   @media screen and (min-width: $break-small) {
     display: block;
