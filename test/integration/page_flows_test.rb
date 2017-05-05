@@ -4,10 +4,10 @@ class PageFlowsTest < ActionDispatch::IntegrationTest
   test "homepage introduces me and links to projects and courses" do
     get root_path
     assert_response :success
-    assert_select '#site-brand', "mattsmrke"
+    assert_select '#site-brand', "matt smrke"
     assert_select 'div#description'
-    assert_select "a[href=\"/projects\"]", "My Projects"
-    assert_select "a[href=\"/courses\"]", "My Courses"
+    assert_select "a[href=\"/projects\"]", "projects"
+    assert_select "a[href=\"/courses\"]", "courses"
   end
 
   test "projects page has a list of projects" do
@@ -20,15 +20,5 @@ class PageFlowsTest < ActionDispatch::IntegrationTest
     get '/courses'
     assert_response :success
     assert_select 'div#courses'
-  end
-
-  test "projects page has link to courses" do
-    get '/projects'
-    assert_select "a[href=\"/courses\"]", "My Courses"
-  end
-
-  test "courses page has a link to projects" do
-    get '/courses'
-    assert_select "a[href=\"/projects\"]", "My Projects"
   end
 end
