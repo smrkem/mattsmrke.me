@@ -38,7 +38,7 @@ p {
 }
 
 header {
-  margin: 10px 0 30px;
+  margin: 10px 0 50px;
 }
 
 header #site-brand {
@@ -207,15 +207,10 @@ footer .social-icons li a {
   margin-top: 80px;
 }
 
-.project {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #aac;
-  border-left: none;
-  border-right: none;
+.project:last-child {
+  margin-bottom: 80px;
 }
 .project h2 {
-  margin-top: 0;
 }
 
 footer {
