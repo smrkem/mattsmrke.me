@@ -76,9 +76,10 @@ header #site-nav a.active {
 }
 
 .page-subheading {
-  padding: 5px 0 10px;
-  margin-top: 20px;
+  padding: 5px 0 7px;
   font-size: 1.3em;
+  border-bottom: 1px solid;
+  margin: 45px 0 30px;
 }
 
 
@@ -130,6 +131,7 @@ footer .social-icons li a {
   width: 100%;
   border: none;
   height: 50%;
+  color: #333;
 }
 #message-me-body:focus {
   border: none;
@@ -151,35 +153,43 @@ footer .social-icons li a {
 .course {
   @include clearfix;
 
-  margin: 10px 5px;
+  margin: 20px 5px;
+  position: relative;
+  box-shadow: 0px 0px 2px 0px #333;
+  padding: 8px 8px 8px 60px;
+}
+.course.other-provider {
+  padding-left: 5px;
+}
+
+.course .provider_link {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.course .provider_link img {
+  width: 100%;
+  height: auto;
 }
 
 .course h4 {
-  margin-bottom: 0px;
+  margin: 2px 0 0 2px;
   font-size: 1.3em;
-  padding-left: 35px;
-
-  background-repeat: no-repeat;
-  background-size: 30px auto;
-  background-position: 0px 0px;
-}
-.course h4.provider-udemy {
-    background-image: image_url("udemy.png");
-}
-.course h4.provider-edx {
-    background-image: image_url("edx.png");
-}
-.course h4.provider-acloudguru {
-    background-image: image_url("acloud-guru.png");
 }
 
 .course-links {
-  padding-left: 35px;
+  padding-left: 10px;
   list-style: none;
   font-size: 0.8em;
 
   @media screen and (min-width: $break-small) {
-    padding-left: 10px;
+    padding-left: 0;
   }
 }
 .course-links li {
