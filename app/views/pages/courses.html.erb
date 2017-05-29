@@ -7,16 +7,6 @@
 
   <h4 class="page-subheading">In Progress:</h4>
   <div class="course">
-    <%== provider_link('acloudguru') %>
-    <h4>
-      AWS Certified Solutions Architect
-    </h4>
-    <ul class="course-links">
-      <li><a target="_blank" href="https://www.udemy.com/aws-certified-solutions-architect-associate/">Course Page</a></li>
-    </ul>
-  </div>
-
-  <div class="course">
     <%== provider_link('udemy') %>
     <h4 class="provider-udemy">
       Angular 2 + Rails 5 Bootcamp
@@ -27,6 +17,17 @@
   </div>
 
   <h4 class="page-subheading">Completed:</h4>
+  <div class="course">
+    <%== provider_link('acloudguru') %>
+    <h4>
+      AWS Certified Solutions Architect
+    </h4>
+    <ul class="course-links">
+      <li><a target="_blank" href="https://www.udemy.com/aws-certified-solutions-architect-associate/">Course Page</a></li>
+      <li><%= link_to "Certificate", image_path('AWS-SA-A-certificate.pdf'), target: "_blank" %></li>
+    </ul>
+  </div>
+
   <div class="course">
     <%== provider_link('udemy') %>
     <h4 class="provider-udemy">
