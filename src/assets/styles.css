@@ -4,4 +4,200 @@ body {
 
   background: #000;
   color: #fff;
+  font-family: 'Duru Sans', sans-serif;
+  font-size: 24px;
+  line-height: 1.53;
+  letter-spacing: -0.9px;
+}
+p:first-child {
+  margin: 0;
+}
+
+@media screen and (min-width: 912px) {
+  .mobile-only { display: none }
+}
+
+html, body, #app, .app-wr, nav {
+  height: 100%;
+}
+
+.long-dash {
+  width: 25px;
+  display: inline-block;
+  border-top: 2px solid;
+  height: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+/* text highlight color */
+.highlight-green {
+  color: rgb(70, 170, 160);
+}
+.highlight-red {
+  color: rgb(217, 65, 59);
+}
+.highlight-orange {
+  color: rgb(247, 177, 65);
+}
+.highlight-pink {
+  color: rgb(241, 55, 88);
+}
+.highlight-blue {
+  color: rgb(89, 104, 211);
+}
+
+/* Navigation Tabs */
+nav {
+  overflow: hidden;
+  width: 51px;
+  position: fixed;
+  transition: width .2s ease;
+  background: #000;
+  z-index: 100;
+}
+nav.expanded {
+  width: 255px;
+}
+
+nav a {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  display: block;
+  text-decoration: none;
+  top: 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+nav a span {
+  transform: rotate(90deg) translateX(30px) translateY(-13px);
+  transform-origin: left bottom;
+  display: block;
+  width: 300px;
+}
+.nav-link {
+  background: rgb(0,0,0);
+  transition: background .2s ease;
+}
+#menu-link {
+  left: 0;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+}
+#home-link {
+  left: 51px;
+  border-right: 1px solid #666;
+}
+#courses-link {
+  left: 102px;
+  border-right: 1px solid rgb(70, 170, 160);
+}
+#courses-link:hover {
+  background: rgb(70, 170, 160);
+}
+#projects-link {
+  left: 153px;
+  border-right: 1px solid #5968d3;
+}
+#projects-link:hover {
+  background: #5968d3;
+}
+#contact-link {
+  left: 204px;
+  border-right: 1px solid #f13758;
+}
+#contact-link:hover {
+  background: #f13758;
+}
+
+@media screen and (min-width: 912px) {
+  nav, nav.expanded {
+    width: 100%;
+  }
+  #home-link {
+    left: auto;
+    right: 0;
+    border-left: 1px solid #666;
+    border-right: none;
+  }
+  #courses-link {
+    left: 0;
+  }
+  #projects-link {
+    left: 51px;
+  }
+  #contact-link {
+    left: 102px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Body Wrap */
+.body-wr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 100%;
+
+  margin-left: 51px;
+  margin-right: 10px;
+}
+
+.main {
+  max-width: 560px;
+  padding-left: 16px;
+  padding-top: 42px;
+
+  transition: color .2s ease;
+}
+.main .highlight {
+  cursor: pointer;
+}
+.main.faded {
+  color: rgb(69,69,69);
+}
+.main.faded .highlight:not(.hovered) {
+  color: rgb(69,69,69);
+}
+
+@media screen and (min-width: 912px) {
+  .body-wr {
+    margin-left: 153px;
+    margin-right: 51px;
+    z-index: 200;
+  }
+}
+
+
+
+
+/* Projects */
+.projects-wr {
+  height: 100%;
+  position: relative;
+}
+
+.project {
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.project-TrackMe {
+  background: rgb(89, 104, 211);
+  left: 0;
+}
+.project-StockData {
+  background: rgb(217, 65, 59);
+  left: 100%;
 }

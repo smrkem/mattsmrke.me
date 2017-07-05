@@ -1,20 +1,29 @@
 import React from 'react';
 import { render } from "react-dom";
+import { Router, Route, browserHistory, IndexRoute } from "react-router";
 
-import { Header } from "./components/Header";
-import { Navigation } from "./components/Navigation";
+import { Root } from "./components/Root";
 import { Home } from "./components/Home";
+import { ProjectsList } from "./components/ProjectsList";
+import { Courses } from "./components/Courses";
+import { Contact } from "./components/Contact";
+
+import "../assets/main.js";
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <Header siteName="Matt Srke"/>
-        <Navigation/>
-        <Home name="Karl" initialAge={23} />
-      </div>
+      <Router history={browserHistory}>
+        <Route path={"/"} component={Root}>
+          <IndexRoute component={Home} />
+          <Route path={"courses"} component={Courses} />
+          <Route path={"projects"} component={ProjectsList} />
+          <Route path={"contact"} component={Contact} />
+        </Route>
+      </Router>
     );
   }
+
 }
 
 render(<App/>, window.document.getElementById("app"));
