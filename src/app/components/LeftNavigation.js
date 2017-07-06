@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-export class Navigation extends React.Component {
+export class LeftNavigation extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -22,10 +22,12 @@ export class Navigation extends React.Component {
   }
 
   render() {
+    var navClasses = "site-nav left-nav";
+    if (this.state.menuExpanded) navClasses += " expanded";
     return (
-      <nav className={this.state.menuExpanded ? "expanded" : "collapsed"}>
-        <a id="menu-link" onClick={this.onToggleMenu.bind(this)} className="mobile-only nav-link"><span>Menu</span></a>
-        <Link to={"/"} id="home-link" onClick={this.onPageNav.bind(this)} className="nav-link"><span>Matt Smrke</span></Link>
+      <nav className={navClasses}>
+        <a id="menu-link" onClick={this.onToggleMenu.bind(this)} className="narrow-only nav-link"><span>Menu</span></a>
+        <Link to={"/"} id="home-link" onClick={this.onPageNav.bind(this)} className="narrow-only nav-link"><span>Matt Smrke</span></Link>
         <Link to={"/courses"}  id="courses-link" onClick={this.onPageNav.bind(this)} className="nav-link"  activeClassName={"active"}><span>Courses</span></Link>
         <Link to={"/projects"}  id="projects-link" onClick={this.onPageNav.bind(this)} className="nav-link"  activeClassName={"active"}><span>Projects</span></Link>
         <Link to={"/contact"}  id="contact-link" onClick={this.onPageNav.bind(this)} className="nav-link"  activeClassName={"active"}><span>Contact</span></Link>

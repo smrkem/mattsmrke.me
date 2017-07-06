@@ -13,11 +13,16 @@ p:first-child {
   margin: 0;
 }
 
+/*
+/* Width-specific helpers
+/************************/
+.wide-only { display: none; }
 @media screen and (min-width: 912px) {
-  .mobile-only { display: none }
+  .narrow-only { display: none !important; }
+  .wide-only { display: initial !important; }
 }
 
-html, body, #app, .app-wr, nav {
+html, body, #app, .app-wr {
   height: 100%;
 }
 
@@ -48,19 +53,30 @@ html, body, #app, .app-wr, nav {
 }
 
 /* Navigation Tabs */
-nav {
-  overflow: hidden;
-  width: 51px;
-  position: fixed;
-  transition: width .2s ease;
-  background: #000;
+nav.site-nav {
   z-index: 100;
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  background: #000;
+  top: 0;
 }
-nav.expanded {
+nav.left-nav {
+  left: 0;
+}
+nav.right-nav {
+  right: 0;
+}
+nav.right-nav,
+nav.left-nav {
+  width: 51px;
+}
+nav.left-nav.expanded {
   width: 255px;
 }
 
-nav a {
+
+nav.site-nav a.nav-link {
   position: absolute;
   height: 100%;
   width: 50px;
@@ -70,17 +86,16 @@ nav a {
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.4px;
+  background: rgb(0,0,0);
+  transition: background .2s ease;
 }
-nav a span {
+nav.site-nav a.nav-link span {
   transform: rotate(90deg) translateX(30px) translateY(-13px);
   transform-origin: left bottom;
   display: block;
   width: 300px;
 }
-.nav-link {
-  background: rgb(0,0,0);
-  transition: background .2s ease;
-}
+
 #menu-link {
   left: 0;
   border-right: 1px solid #ddd;
@@ -111,16 +126,15 @@ nav a span {
 #contact-link:hover {
   background: #f13758;
 }
-
+#home-link-right {
+  border-left: 1px solid #666;
+}
+#home-link-right:hover {
+  background: rgb(69,69,69);
+}
 @media screen and (min-width: 912px) {
-  nav, nav.expanded {
-    width: 100%;
-  }
-  #home-link {
-    left: auto;
-    right: 0;
-    border-left: 1px solid #666;
-    border-right: none;
+  nav.left-nav, nav.left-nav.expanded {
+    width: 153px;
   }
   #courses-link {
     left: 0;
@@ -146,16 +160,16 @@ nav a span {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
   height: 100%;
 
   margin-left: 51px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .main {
   max-width: 560px;
   padding-left: 16px;
+  padding-right: 10px;
   padding-top: 42px;
 
   transition: color .2s ease;
@@ -174,7 +188,6 @@ nav a span {
   .body-wr {
     margin-left: 153px;
     margin-right: 51px;
-    z-index: 200;
   }
 }
 
