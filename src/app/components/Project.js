@@ -9,20 +9,20 @@ export class Project extends React.Component {
     return(
       <div className={"project project-" + this.props.name }>
         <div className="main">
-          <div className="project-description">
+          <p className="project-description">
             <span className="project-title">{ this.props.name }</span><span className="long-dash"></span>&nbsp;
             { this.props.description }
-          </div>
+          </p>
 
           <div className="project-technologies">
-            <h3 class="small-heading">Technologies</h3>
-            <ul>{ this.props.technologies.map((tech) => {
-              return <li>{tech}</li>
+            <h3 className="small-heading">Technologies</h3>
+            <ul>{ this.props.technologies.map((tech, i) => {
+              return <li key={i}>{tech}</li>
             }) }</ul>
           </div>
           <div className="project-links">
             { live_link }
-            <h3 class="small-heading">Github</h3>
+            <h3 className="small-heading">Github</h3>
             <a target="_blank" href={this.props.github_link}>View the code</a>
           </div>
         </div>

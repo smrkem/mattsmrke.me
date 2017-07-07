@@ -5,13 +5,29 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Duru Sans', sans-serif;
-  font-size: 24px;
-  line-height: 1.53;
-  letter-spacing: -0.9px;
+  font-size: 28px;
+  letter-spacing: -0.7px;
+}
+p {
+  line-height: 43px;
 }
 p:first-child {
   margin: 0;
 }
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+@media screen and (min-width: 912px) {
+  body {
+    font-size: 38px;
+    letter-spacing: -0.9px;
+  }
+  p {
+    line-height: 58px;
+  }
+}
+
 
 /*
 /* Width-specific helpers
@@ -64,86 +80,105 @@ nav.site-nav {
 nav.left-nav {
   left: 0;
 }
-nav.right-nav {
-  right: 0;
-}
-nav.right-nav,
 nav.left-nav {
-  width: 51px;
+  width: 61px;
+  transition: width .2s ease-out;
 }
 nav.left-nav.expanded {
-  width: 255px;
+  width: 100%;
 }
 
 
 nav.site-nav a.nav-link {
   position: absolute;
   height: 100%;
-  width: 50px;
+  width: 60px;
   display: block;
   text-decoration: none;
   top: 0;
-  color: #fff;
-  font-size: 14px;
-  letter-spacing: 0.4px;
+  color: #595959;
+  font-size: 16px;
   background: rgb(0,0,0);
-  transition: background .2s ease;
+  transition: background .2s ease, color .2s ease;
 }
 nav.site-nav a.nav-link span {
-  transform: rotate(90deg) translateX(30px) translateY(-13px);
+  transform: rotate(90deg) translateX(60px) translateY(-22px);
   transform-origin: left bottom;
   display: block;
   width: 300px;
 }
+nav.site-nav a#home-link,
+nav.site-nav a#home-link-right,
+nav.site-nav a.nav-link.active,
+nav.site-nav a.nav-link:hover {
+  color: #fff;
+}
 
 #menu-link {
   left: 0;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #595959;
   cursor: pointer;
 }
 #home-link {
-  left: 51px;
-  border-right: 1px solid #666;
+  left: 244px;
+  border-left: 1px solid #595959;
+}
+nav.left-nav.expanded #home-link {
+  left: auto;
+  right: 0;
+}
+#home-link:hover {
+  background: #222222;
 }
 #courses-link {
-  left: 102px;
-  border-right: 1px solid rgb(70, 170, 160);
+  left: 61px;
+  border-right: 1px solid #337c74;
 }
 #courses-link:hover {
   background: rgb(70, 170, 160);
 }
 #projects-link {
-  left: 153px;
-  border-right: 1px solid #5968d3;
+  left: 122px;
+  border-right: 1px solid #414c9a;
 }
 #projects-link:hover {
   background: #5968d3;
 }
 #contact-link {
-  left: 204px;
-  border-right: 1px solid #f13758;
+  left: 183px;
+  border-right: 1px solid #a8273e;
 }
 #contact-link:hover {
   background: #f13758;
 }
 #home-link-right {
-  border-left: 1px solid #666;
+  border-left: 1px solid #595959;
 }
 #home-link-right:hover {
-  background: rgb(69,69,69);
+  background: #222222;
 }
 @media screen and (min-width: 912px) {
   nav.left-nav, nav.left-nav.expanded {
-    width: 153px;
+    width: 243px;
+  }
+  nav.right-nav {
+    right: 0;
+    width: 81px;
+  }
+  nav.site-nav a.nav-link {
+    width: 80px;
+  }
+  nav.site-nav a.nav-link span {
+    transform: rotate(90deg) translateX(60px) translateY(-28px);
   }
   #courses-link {
     left: 0;
   }
   #projects-link {
-    left: 51px;
+    left: 81px;
   }
   #contact-link {
-    left: 102px;
+    left: 162px;
   }
 }
 
@@ -162,15 +197,15 @@ nav.site-nav a.nav-link span {
   right: 0;
   height: 100%;
 
-  margin-left: 51px;
+  margin-left: 61px;
   margin-right: 0px;
 }
 
 .main {
-  max-width: 560px;
-  padding-left: 16px;
+  max-width: 864px;
+  padding-left: 32px;
   padding-right: 10px;
-  padding-top: 42px;
+  padding-top: 70px;
 
   transition: color .2s ease;
 }
@@ -186,8 +221,8 @@ nav.site-nav a.nav-link span {
 
 @media screen and (min-width: 912px) {
   .body-wr {
-    margin-left: 153px;
-    margin-right: 51px;
+    margin-left: 243px;
+    margin-right: 81px;
   }
 }
 
@@ -197,10 +232,43 @@ nav.site-nav a.nav-link span {
 /* Projects */
 .projects-wr {
   height: 100%;
+  width: 100%;
+  left: 0%;
+  position: absolute;
+
+  transition: all .2s ease;
+}
+.projects-next-button {
+  position: absolute;
+  right: -15px;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  z-index: 200;
+  cursor: pointer;
+}
+
+.projects-next-button .next-project-name {
+  display: inline-block;;
+  width: 0px;
+  overflow: hidden;
+}
+.projects-next-button .next-project-arrow-wr {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
   position: relative;
+  background: white;
+  border-radius: 15px;
+}
+.projects-next-button .next-project-arrow {
+  display: inline-block;
+  position: absolute;
 }
 
 .project {
+  width: 100%;
   min-height: 100%;
   position: absolute;
   top: 0;
