@@ -3,11 +3,27 @@ import PropTypes from "prop-types";
 
 export class Project extends React.Component {
 
+  componentDidMount() {
+    this.props.reportHeight($(".project-" + this.props.name).height());
+  }
+
   render() {
-    console.log(this.props);
-    var live_link = "live_link" in this.props ? <a target="_blank" href={this.props.live_link} >Visit it live</a> : "";
+    var styles = {
+      height: this.props.height ? this.props.height : "auto",
+      left: (this.props.ind * 100) + '%',
+      background: this.props.bgColor
+    }
+    var projectHeight = this.props.height ? this.props.height : "auto";
+    var liveLink = "";
+    if ("live_link" in this.props) {
+      liveLink = <div className="live-link">
+        <h3 className="small-heading">Live</h3>
+        <a target="_blank" href={this.props.live_link} >View the app</a>
+      </div>;
+    }
+
     return(
-      <div className={"project project-" + this.props.name }>
+      <div className={"project project-" + this.props.name } style={{ ...styles }}>
         <div className="main">
           <p className="project-description">
             <span className="project-title">{ this.props.name }</span><span className="long-dash"></span>&nbsp;
@@ -17,13 +33,16 @@ export class Project extends React.Component {
           <div className="project-technologies">
             <h3 className="small-heading">Technologies</h3>
             <ul>{ this.props.technologies.map((tech, i) => {
-              return <li key={i}>{tech}</li>
+              return <li key={i}><span className="long-dash"></span>{tech}</li>
             }) }</ul>
           </div>
+
           <div className="project-links">
-            { live_link }
-            <h3 className="small-heading">Github</h3>
-            <a target="_blank" href={this.props.github_link}>View the code</a>
+            <div className="code-link">
+              <h3 className="small-heading">Github</h3>
+              <a target="_blank" href={this.props.github_link}>View the code</a>
+            </div>
+            { liveLink }
           </div>
         </div>
       </div>

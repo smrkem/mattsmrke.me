@@ -39,17 +39,18 @@ a {
 }
 
 html, body, #app, .app-wr {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 .long-dash {
-  width: 25px;
+  width: 40px;
   display: inline-block;
-  border-top: 2px solid;
-  height: 6px;
+  border-top: 3px solid;
+  height: 9px;
   margin-left: 3px;
   margin-right: 3px;
 }
+
 
 /* text highlight color */
 .highlight-green {
@@ -68,7 +69,14 @@ html, body, #app, .app-wr {
   color: rgb(89, 104, 211);
 }
 
-/* Navigation Tabs */
+h3.small-heading {
+  font-size: 16px;
+  margin: 0 0 30px;
+}
+
+/*
+/* Navigation Tabs
+/********************/
 nav.site-nav {
   z-index: 100;
   overflow: hidden;
@@ -89,6 +97,23 @@ nav.left-nav.expanded {
 }
 
 
+span.white-arrow {
+  display: block;
+  position: absolute;
+  top: 85px;
+  left: 50%;
+  height: 14px;
+  width: 16px;
+  margin: -7px 0 0 -8px;
+  background: url(/assets/images/arrow-white.svg) no-repeat;
+
+  transition: transform .2s ease-out;
+}
+
+nav.left-nav.expanded span.white-arrow {
+  transform: rotateY(180deg);
+}
+
 nav.site-nav a.nav-link {
   position: absolute;
   height: 100%;
@@ -101,7 +126,7 @@ nav.site-nav a.nav-link {
   background: rgb(0,0,0);
   transition: background .2s ease, color .2s ease;
 }
-nav.site-nav a.nav-link span {
+nav.site-nav a.nav-link span:not(.white-arrow) {
   transform: rotate(90deg) translateX(60px) translateY(-22px);
   transform-origin: left bottom;
   display: block;
@@ -120,12 +145,15 @@ nav.site-nav a.nav-link:hover {
   cursor: pointer;
 }
 #home-link {
-  left: 244px;
+  right: 0;
   border-left: 1px solid #595959;
+  opacity: 0;
+  z-index: -1;
+
+  transition: opacity .2s ease-out;
 }
 nav.left-nav.expanded #home-link {
-  left: auto;
-  right: 0;
+  opacity: 1;
 }
 #home-link:hover {
   background: #222222;
@@ -236,35 +264,65 @@ nav.left-nav.expanded #home-link {
   left: 0%;
   position: absolute;
 
+  overflow-x: hidden;
   transition: all .2s ease;
 }
 .projects-next-button {
-  position: absolute;
-  right: -15px;
-  text-transform: uppercase;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background: #fff;
+  position: fixed;
   top: 50%;
+  right: 61px;
   transform: translateY(-50%);
-  color: #000;
   z-index: 200;
   cursor: pointer;
 }
-
+span.arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 14px;
+    width: 16px;
+    background: url(/assets/images/arrow-black.svg) no-repeat;
+    z-index: 2;
+    margin: -7px 0 0 -8px;
+}
 .projects-next-button .next-project-name {
-  display: inline-block;;
-  width: 0px;
-  overflow: hidden;
-}
-.projects-next-button .next-project-arrow-wr {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  position: relative;
-  background: white;
-  border-radius: 15px;
-}
-.projects-next-button .next-project-arrow {
-  display: inline-block;
   position: absolute;
+  top: 0px;
+  right: 20px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+.projects-next-button .next-project-name div.inner-name {
+  display: block;
+  padding: 0 20px;
+  height: 40px;
+  font-size: 13px;
+  color: #000;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  background: #fff;
+  border-radius: 40px 0 0 40px;
+
+  transform: translateX(100%);
+  transition: transform .2s ease-out;
+}
+.projects-next-button:hover .next-project-name div.inner-name {
+  transform: translateX(0%);
+}
+.projects-next-button .next-project-name div.inner-name span {
+  position: relative;
+  top: -8px;
+  height: 16px;
+  white-space: nowrap;
 }
 
 .project {
@@ -272,13 +330,28 @@ nav.left-nav.expanded #home-link {
   min-height: 100%;
   position: absolute;
   top: 0;
+  padding-bottom: 100px;
+}
+.project a {
+  color: #fff;
 }
 
-.project-TrackMe {
-  background: rgb(89, 104, 211);
-  left: 0;
+p.project-description,
+.project-technologies {
+  margin-bottom: 100px;
 }
-.project-StockData {
-  background: rgb(217, 65, 59);
-  left: 100%;
+
+.project-technologies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.project-links {
+  overflow: hidden;
+}
+.project-links .code-link,
+.project-links .live-link {
+  width: 50%;
+  float: left;
+  padding-bottom: 2px;
 }

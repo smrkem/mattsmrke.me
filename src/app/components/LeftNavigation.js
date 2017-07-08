@@ -26,7 +26,7 @@ export class LeftNavigation extends React.Component {
     if (this.state.menuExpanded) navClasses += " expanded";
     return (
       <nav className={navClasses}>
-        <a id="menu-link" onClick={this.onToggleMenu.bind(this)} className="narrow-only nav-link"><span>Menu</span></a>
+        <a id="menu-link" onClick={this.onToggleMenu.bind(this)} className="narrow-only nav-link"><span className="white-arrow"></span></a>
         <Link to={"/"} id="home-link" onClick={this.onPageNav.bind(this)} className="narrow-only nav-link"><span>Matt Smrke</span></Link>
         <Link to={"/courses"}  id="courses-link" onClick={this.onPageNav.bind(this)} className="nav-link"  activeClassName={"active"}><span>Courses</span></Link>
         <Link to={"/projects"}  id="projects-link" onClick={this.onPageNav.bind(this)} className="nav-link"  activeClassName={"active"}><span>Projects</span></Link>
