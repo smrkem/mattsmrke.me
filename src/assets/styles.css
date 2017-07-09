@@ -196,7 +196,7 @@ nav.left-nav.expanded #home-link {
   nav.site-nav a.nav-link {
     width: 80px;
   }
-  nav.site-nav a.nav-link span {
+  nav.site-nav a.nav-link span:not(.white-arrow) {
     transform: rotate(90deg) translateX(60px) translateY(-28px);
   }
   #courses-link {
@@ -354,4 +354,15 @@ p.project-description,
   width: 50%;
   float: left;
   padding-bottom: 2px;
+}
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #454545;
 }
