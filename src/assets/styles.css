@@ -18,13 +18,27 @@ a {
   text-decoration: none;
   border-bottom: 1px dotted;
 }
+
+
+/*
+/* Scrollbars
+/**********************/
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #454545;
+}
 @media screen and (min-width: 912px) {
   body {
     font-size: 38px;
     letter-spacing: -0.9px;
   }
   p {
-    line-height: 58px;
+    line-height: 51px;
   }
 }
 
@@ -354,15 +368,4 @@ p.project-description,
   width: 50%;
   float: left;
   padding-bottom: 2px;
-}
-::-webkit-scrollbar {
-    width: 2px;
-}
-
-::-webkit-scrollbar-track {
-    background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #454545;
 }
