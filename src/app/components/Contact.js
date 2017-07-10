@@ -13,7 +13,7 @@ export class Contact extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main contact">
         <p>Drop me a <span className="highlight highlight-pink">Message</span>.</p>
         <p>
           Email me at <a target="_blank" href="mailto:smrkem@gmail.com" className="highlight highlight-blue">smrkem@gmail.com</a>.

@@ -5,18 +5,18 @@ body {
   background: #000;
   color: #fff;
   font-family: 'Duru Sans', sans-serif;
-  font-size: 28px;
+  font-size: 25px;
   letter-spacing: -0.7px;
 }
 p {
-  line-height: 43px;
+  line-height: 37px;
 }
 p:first-child {
   margin: 0;
 }
 a {
   text-decoration: none;
-  border-bottom: 1px dotted;
+  border-bottom: 1px dotted #fff;
 }
 
 
@@ -56,15 +56,9 @@ html, body, #app, .app-wr {
   /*height: 100%;*/
 }
 
-.long-dash {
-  width: 40px;
-  display: inline-block;
-  border-top: 3px solid;
-  height: 9px;
-  margin-left: 3px;
-  margin-right: 3px;
+.long-dash::before {
+  content: "—"
 }
-
 
 /* text highlight color */
 .highlight-green {
@@ -245,11 +239,14 @@ nav.left-nav.expanded #home-link {
 
 .main {
   max-width: 864px;
-  padding-left: 32px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
   padding-top: 70px;
 
   transition: color .2s ease;
+}
+.main.home, .main.courses, .main.contact {
+  padding-bottom: 200px;
 }
 .main .highlight {
   cursor: pointer;
@@ -265,6 +262,9 @@ nav.left-nav.expanded #home-link {
   .body-wr {
     margin-left: 243px;
     margin-right: 81px;
+  }
+  .main {
+    padding-left: 30px;
   }
 }
 
@@ -313,6 +313,7 @@ span.arrow {
   margin: 0;
   padding: 0;
   height: 40px;
+  line-height: 58px;
 }
 .projects-next-button .next-project-name div.inner-name {
   display: block;
@@ -344,7 +345,7 @@ span.arrow {
   min-height: 100%;
   position: absolute;
   top: 0;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 .project a {
   color: #fff;

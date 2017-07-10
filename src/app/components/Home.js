@@ -14,7 +14,7 @@ export class Home extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main home">
         <p>
           I'm a web developer in <span className="highlight highlight-green">Toronto</span>, Canada.
           Currently I'm focused on <span className="highlight highlight-red">Ruby on Rails</span> and stay current with <span className="highlight highlight-orange">Python</span>.
