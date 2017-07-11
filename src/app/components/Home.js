@@ -19,7 +19,7 @@ export class Home extends React.Component {
           I'm a web developer in <span className="highlight highlight-green">Toronto</span>, Canada.
           Currently I'm focused on <span className="highlight highlight-red">Ruby on Rails</span> and stay current with <span className="highlight highlight-orange">Python</span>.
           I often use <span className="highlight highlight-pink">Flask</span> and <span className="highlight highlight-blue">Django</span> as well.
-          I'm well versed in modern app architecture and feel that front-end frameworks like <span className="highlight highlight-green">React</span> and <span className="highlight highlight-red">Angular</span> are must-haves -- especially as <span className="highlight highlight-orange">serverless</span> becomes more popular.
+          I'm well versed in modern app architecture and feel that front-end frameworks like <span className="highlight highlight-green">React</span> and <span className="highlight highlight-red">Angular</span> are must-haves<span className="long-dash"></span>especially as <span className="highlight highlight-orange">serverless</span> becomes more popular.
           I'm a big fan of <span className="highlight highlight-pink">Docker</span>, which has freed me to play around with a variety of languages and frameworks.
           I write tests for all my code and develop using <span className="highlight highlight-blue">TDD</span>.
           Here are some samples of <Link to={"/projects"} className="highlight highlight-green">projects</Link> I've worked on.
