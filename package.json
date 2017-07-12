@@ -1,7 +1,7 @@
 {
-  "name": "mattsmrke.me",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "initial react + webpack setup",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,16 +9,8 @@
     "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --history-api-fallback",
     "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/smrkem/mattsmrke.me.git"
-  },
-  "author": "",
+  "author": "matt smrke",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/smrkem/mattsmrke.me/issues"
-  },
-  "homepage": "https://github.com/smrkem/mattsmrke.me#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
