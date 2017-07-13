@@ -5,7 +5,7 @@ import { Router, Route, browserHistory, IndexRoute } from "react-router";
 import { Root } from "./components/Root";
 import { Home } from "./components/Home";
 import { ProjectsList } from "./components/ProjectsList";
-import { Courses } from "./components/Courses";
+import { CoursesList } from "./components/CoursesList";
 import { Contact } from "./components/Contact";
 
 import "../assets/main.js";
@@ -16,7 +16,7 @@ class App extends React.Component {
       <Router history={browserHistory}>
         <Route path={"/"} component={Root}>
           <IndexRoute component={Home} />
-          <Route path={"courses"} component={Courses} />
+          <Route path={"courses"} component={CoursesList} />
           <Route path={"projects"} component={ProjectsList} />
           <Route path={"contact"} component={Contact} />
         </Route>
