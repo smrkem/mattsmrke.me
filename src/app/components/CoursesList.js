@@ -55,8 +55,8 @@ export class CoursesList extends React.Component {
         title: "Introduction to Python for Data Science",
         status: "Completed",
         provider: "edX",
-        coursePage: "",
-        syllabus: "",
+        coursePage: "https://www.edx.org/course/introduction-python-data-science-microsoft-dat208x-5",
+        syllabus: "https://courses.edx.org/courses/course-v1:Microsoft+DAT208x+5T2016/a83dfa3e93a34598987774b010e84043/",
         completionDate: "",
         certificateUrl: "todo",
         review: ""

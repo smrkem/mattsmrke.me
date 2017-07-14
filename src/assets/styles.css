@@ -16,9 +16,11 @@ p:first-child {
 }
 a {
   text-decoration: none;
+}
+p a,
+.project-links a {
   border-bottom: 1px dotted #fff;
 }
-
 
 /*
 /* Scrollbars
@@ -378,20 +380,41 @@ p.project-description,
 /* Courses
 /**************************/
 .course {
-  overflow: hidden;
 }
 .course-info {
-  width: 100px;
-  float: right;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.5px;
 }
+.course-info-button {
+  display: block;
+  width: 22px;
+  float: left;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.course-info-button-icon {
+  display: block;
+  height: 22px;
+  width: 22px;
+  background: url('/assets/images/info-default.svg');
+}
+.course-info-provider-name {
+  line-height: 25px;
+  vertical-align: middle;
+}
 .course-main {
-  margin-right: 100px;
+
 }
 h3.course-title {
   margin: 0 0 15px;
-  padding: 0;
-  font-size: 38px;
+}
+
+.course-links a {
+  font-size: 11px;
+  color: #595959;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;;
+
+  margin-right: 20px;
 }
