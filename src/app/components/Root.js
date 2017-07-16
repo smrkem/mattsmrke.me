@@ -1,9 +1,13 @@
 import React from "react";
+import { Menu } from "./Menu";
 
 export class Root extends React.Component {
   render() {
     return(
-      <div className="main-wr">{this.props.children}</div>
-    );    
+      <div>
+        <Menu />
+        {this.props.children}
+      </div>
+    );
   }
 }
