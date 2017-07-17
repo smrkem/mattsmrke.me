@@ -20,7 +20,6 @@ export class Home extends React.Component {
   render() {
     return(
       <div id="main-wr">
-        <div id="next-project">NEXT>>>>>>></div>
         <div id="home" className="main main-content">
           <p>
             I'm a web developer in <span className="highlight highlight-green">Toronto</span>, Canada.

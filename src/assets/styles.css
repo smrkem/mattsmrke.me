@@ -4,6 +4,22 @@ body {
   font-family: 'Duru Sans', sans-serif;
 }
 
+h3.small-heading {
+  font-size: 16px;
+}
+/*
+/* Scrollbars
+/**********************/
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #454545;
+}
+
 /* icons */
 span.white-arrow {
   display: block;
@@ -25,6 +41,11 @@ span.white-arrow {
   .wide-only { display: initial !important; }
 }
 
+/* links */
+.main-content a {
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
 /* text highlight color */
 .highlight-green {
   color: rgb(70, 170, 160);
@@ -240,9 +261,47 @@ nav.expanded #menu-link .white-arrow {
 /*
 /* Projects
 /**************************/
+#projects-scroll {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.project {
+  position: absolute;
+  width: 100%;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}
 #next-project {
     position: absolute;
     right: 40px;
     top: 40px;
     z-index: 11;
+}
+.project .small-heading {
+  margin: 0 0 30px;
+}
+
+.project-technologies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.project-description,
+.project-technologies {
+    margin-bottom: 100px;
+}
+.project-links {
+  overflow: hidden;
+}
+.project-links .code-link,
+.project-links .live-link {
+    width: 50%;
+    float: left;
+    padding-bottom: 2px;
+}
+.project-links a {
+  color: #fff;
 }
