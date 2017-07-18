@@ -24,7 +24,12 @@ export class Projects extends React.Component {
     })
     return(
       <div id="main-wr">
-        <div id="next-project">NEXT>>>>>>></div>
+        <div className="projects-next-button">
+          <span className="black-arrow"></span>
+          <p className="next-project-name">
+            <div className="inner-name"><span>StockData</span></div>
+          </p>
+        </div>
         <div id="projects" className="main">
           <div id="projects-scroll">{projectList}</div>
         </div>
