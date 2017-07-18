@@ -6,6 +6,7 @@ export class Projects extends React.Component {
     super();
     this.state = {
       projects: this.getProjects(),
+      projectIndex: 1,
       projectColors: [
         "rgb(89, 104, 211)", // blue
         "rgb(70, 170, 160)", // green
@@ -16,22 +17,38 @@ export class Projects extends React.Component {
     }
   }
 
+  onIndexChange() {
+    this.setState({
+      projectIndex: this.getNextIndex()
+    });
+  }
+
+  getNextIndex() {
+    return this.state.projectIndex == this.state.projects.length ? 1 : this.state.projectIndex + 1;
+  }
+
   render() {
     let projectList = this.getProjects().map((p, ind) => {
       p.ind = ind;
       p.bgColor = this.state.projectColors[(ind % this.state.projectColors.length)];
       return <Project {...p} key={ind} />
-    })
+    });
+    let leftIndex = ((this.state.projectIndex - 1) * -100) + '%';
+    let nextProjectName = this.state.projects[this.getNextIndex() - 1].name;
+    let styles = {
+      left: leftIndex,
+      transition: "left .3s ease-out"
+    }
     return(
       <div id="main-wr">
-        <div className="projects-next-button">
+        <div className="projects-next-button" onClick={this.onIndexChange.bind(this)}>
           <span className="black-arrow"></span>
-          <p className="next-project-name">
-            <div className="inner-name"><span>StockData</span></div>
-          </p>
+          <div className="next-project-name">
+            <div className="inner-name"><span>{ nextProjectName }</span></div>
+          </div>
         </div>
         <div id="projects" className="main">
-          <div id="projects-scroll">{projectList}</div>
+          <div id="projects-scroll" style={{...styles}}>{projectList}</div>
         </div>
       </div>
     );

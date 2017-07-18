@@ -2,7 +2,6 @@ import React from "react";
 
 export class Project extends React.Component {
   render() {
-    console.log(this.props);
     let styles = {
       left: (this.props.ind * 100) + '%',
       background: this.props.bgColor
