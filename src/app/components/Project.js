@@ -16,28 +16,28 @@ export class Project extends React.Component {
     }
 
     return (
-      <div className="project main-content" style={{...styles}}>
+      <div className="project" style={{...styles}}>
+        <div className="main-content">
+          <p className="project-description">
+            <span className="project-title">{ this.props.name }</span><span className="long-dash"></span>&nbsp;
+            { this.props.description }
+          </p>
 
-        <p className="project-description">
-          <span className="project-title">{ this.props.name }</span><span className="long-dash"></span>&nbsp;
-          { this.props.description }
-        </p>
-
-        <div className="project-technologies">
-          <h3 className="small-heading">Technologies</h3>
-          <ul>{ this.props.technologies.map((tech, i) => {
-            return <li key={i}><span className="long-dash"></span>{tech}</li>
-          }) }</ul>
-        </div>
-
-        <div className="project-links">
-          <div className="code-link">
-            <h3 className="small-heading">Github</h3>
-            <a target="_blank" href={this.props.github_link}>View the code</a>
+          <div className="project-technologies">
+            <h3 className="small-heading">Technologies</h3>
+            <ul>{ this.props.technologies.map((tech, i) => {
+              return <li key={i}><span className="long-dash"></span>{tech}</li>
+            }) }</ul>
           </div>
-          { liveLink }
-        </div>
 
+          <div className="project-links">
+            <div className="code-link">
+              <h3 className="small-heading">Github</h3>
+              <a target="_blank" href={this.props.github_link}>View the code</a>
+            </div>
+            { liveLink }
+          </div>
+        </div>
       </div>
     );
   }
