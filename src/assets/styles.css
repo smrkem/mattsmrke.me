@@ -273,17 +273,10 @@ nav.expanded #menu-link .white-arrow {
 }
 #projects-scroll {
   height: 100%;
-  /*width: 100%;*/
-  position: relative;
-  /*overflow: hidden;*/
-}
-.project {
-  position: absolute;
   width: 100%;
-  overflow-y: scroll;
-  top: 0;
-  bottom: 0;
+  position: relative;
 }
+
 
 .project .small-heading {
   margin: 0 0 30px;
@@ -311,7 +304,15 @@ nav.expanded #menu-link .white-arrow {
   color: #fff;
 }
 
-
+@media screen and (min-width: 912px) {
+  .project {
+    position: absolute;
+    width: 100%;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+  }
+}
 
 
 
@@ -323,56 +324,62 @@ nav.expanded #menu-link .white-arrow {
 /* Next Project button
 /******************************/
 .projects-next-button {
-  display: block;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  background: #fff;
-  position: fixed;
-  top: 50%;
-  right: 61px;
-  transform: translateY(-50%);
-  z-index: 200;
-  cursor: pointer;
+  display: none;
 }
-.projects-next-button .next-project-name {
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  height: 40px;
-  line-height: 58px;
-}
-.projects-next-button .next-project-name div.inner-name {
-  display: block;
-  padding: 0 20px;
-  height: 40px;
-  font-size: 13px;
-  color: #000;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 
-  background: #fff;
-  border-radius: 40px 0 0 40px;
-
-  transform: translateX(100%);
-  transition: transform .2s ease-out;
-}
-.projects-next-button:hover .next-project-name div.inner-name {
-  transform: translateX(0%);
-}
-.projects-next-button .next-project-name div.inner-name span {
-  position: relative;
-  top: -8px;
-  height: 16px;
-  white-space: nowrap;
-}
-.projects-next-button .black-arrow {
-    position: absolute;
+@media screen and (min-width: 912px) {
+  .projects-next-button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background: #fff;
+    position: fixed;
     top: 50%;
-    left: 50%;
-    z-index: 2;
-    margin: -7px 0 0 -8px;
+    right: 61px;
+    transform: translateY(-50%);
+    z-index: 200;
+    cursor: pointer;
+  }
+  .projects-next-button .next-project-name {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 58px;
+  }
+  .projects-next-button .next-project-name div.inner-name {
+    display: block;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 13px;
+    color: #000;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    background: #fff;
+    border-radius: 40px 0 0 40px;
+
+    transform: translateX(100%);
+    transition: transform .2s ease-out;
+  }
+  .projects-next-button:hover .next-project-name div.inner-name {
+    transform: translateX(0%);
+  }
+  .projects-next-button .next-project-name div.inner-name span {
+    position: relative;
+    top: -8px;
+    height: 16px;
+    white-space: nowrap;
+  }
+  .projects-next-button .black-arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      margin: -7px 0 0 -8px;
+  }
 }
