@@ -16,7 +16,7 @@ export class Course extends React.Component {
         <h3 className="course-title">{ this.props.title }</h3>
         <div className="course-info">
           <span className="course-info-provider-name">{ this.props.provider }</span>
-          <a className="course-info-button">
+          <a className="course-info-button" onClick={() => this.props.showReview(this.props.index)} >
             <span className="course-info-button-icon"></span>
           </a>
         </div>

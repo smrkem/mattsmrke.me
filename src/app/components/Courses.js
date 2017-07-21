@@ -1,16 +1,45 @@
 import React from "react";
 import { Course } from "./Course";
+import { CourseReview } from "./CourseReview";
 
 export class Courses extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      courses: this.getCourses(),
+      reviewIndex: 1,
+      showReview: false
+    }
+  }
+
+  onShowReview(index) {
+    this.setState({
+      showReview: true,
+      reviewIndex: index
+    });
+  }
+
+  onHideReview(index) {
+    this.setState({
+      showReview: false,
+    });
+  }
+
   render() {
-    let coursesList = this.getCourses().map((course, i) => {
-      return <Course {...course} key={i} />
+    let coursesList = this.state.courses.map((course, i) => {
+      course.index = i;
+      return <Course {...course} key={i} showReview={this.onShowReview.bind(this)} />
     });
     return(
       <div id="main-wr">
         <div id="courses" className="main main-content">
           { coursesList }
         </div>
+        <CourseReview
+          showReview={this.state.showReview}
+          course={this.state.courses[this.state.reviewIndex]}
+          closeReview={this.onHideReview.bind(this)}
+        />
       </div>
     );
   }

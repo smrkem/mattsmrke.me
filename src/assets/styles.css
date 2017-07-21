@@ -47,7 +47,13 @@ span.black-arrow {
   display: block;
   height: 22px;
   width: 22px;
-  background: url('/assets/images/info-default.svg');
+  background: url(/assets/images/info-default.svg) no-repeat;
+}
+span.close-x {
+  display: block;
+  height: 18px;
+  width: 18px;
+  background: url(/assets/images/close-white.svg) no-repeat;
 }
 
 
@@ -470,4 +476,63 @@ a.course-info-button {
 
   margin-right: 20px;
   margin-bottom: 10px;
+}
+
+
+
+
+
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/* Course Reviews
+/*******************************/
+#course-review-wr {
+  top: 0;
+  background: #000;
+  opacity: 0;
+  z-index: -100;
+  transition: opacity .3s ease-out;
+}
+#course-review-wr.opened {
+  opacity: 1;
+  z-index: 1;
+}
+#course-review-close {
+  position: absolute;
+  cursor: pointer;
+  top: 75px;
+  right: 30px;
+}
+#course-review-headers {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+}
+#course-review-headers > div {
+  float: left;
+  width: 155px;
+  margin-bottom: 20px;
+}
+#course-review-headers h4 {
+  font-size: 11px;
+  color: #595959;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+#course-review-provider-name {
+  text-transform: uppercase;
+}
+#course-review-main {
+  margin-top: 60px;
+}
+#course-review-review {
+  font-size: 16px;
+  line-height: 1.88;
+  margin-top: 20px;
 }
