@@ -7,6 +7,13 @@ body {
 h3.small-heading {
   font-size: 16px;
 }
+
+p {
+  margin-top: 0.5em;
+}
+p:first-child {
+  margin-top: 0;
+}
 /*
 /* Scrollbars
 /**********************/
@@ -236,6 +243,44 @@ nav.expanded #menu-link .white-arrow {
 
 
 
+
+
+
+
+
+
+/*
+/*
+/*
+/*
+/*
+/*
+/* HIghlight hover effect
+/******************/
+#contact.main-content,
+#home.main-content {
+  transition: color .2s ease;
+}
+#contact .highlight,
+#home .highlight {
+  cursor: pointer;
+}
+#contact.faded,
+#home.faded {
+  color: rgb(69,69,69);
+}
+#contact.faded .highlight:not(.hovered),
+#home.faded .highlight:not(.hovered) {
+  color: rgb(69,69,69);
+}
+
+
+
+
+
+
+
+
 /*
 /*
 /*
@@ -244,18 +289,7 @@ nav.expanded #menu-link .white-arrow {
 /*
 /* Home
 /******************/
-#home.main-content {
-  transition: color .2s ease;
-}
-#home .highlight {
-  cursor: pointer;
-}
-#home.faded {
-  color: rgb(69,69,69);
-}
-#home.faded .highlight:not(.hovered) {
-  color: rgb(69,69,69);
-}
+
 
 
 
