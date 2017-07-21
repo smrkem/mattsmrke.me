@@ -3,7 +3,16 @@ import { Course } from "./Course";
 
 export class Courses extends React.Component {
   render() {
-    return(<p>Courses content</p>);
+    let coursesList = this.getCourses().map((course, i) => {
+      return <Course {...course} key={i} />
+    });
+    return(
+      <div id="main-wr">
+        <div id="courses" className="main main-content">
+          { coursesList }
+        </div>
+      </div>
+    );
   }
 
   getCourses() {
