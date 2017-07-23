@@ -69,78 +69,78 @@ export class Projects extends React.Component {
         technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
         github_link: "https://github.com/smrkem/trackme"
       },
-      {
-        name: "Sample Project 3",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 4",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 5",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 6",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 7",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 8",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 9",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 10",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 11",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 12",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 13",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      },
-      {
-        name: "Sample Project 14",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
-        technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
-        github_link: "https://github.com/smrkem/trackme"
-      }
+      // {
+      //   name: "Sample Project 3",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 4",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 5",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 6",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 7",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 8",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 9",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 10",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 11",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 12",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 13",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // },
+      // {
+      //   name: "Sample Project 14",
+      //   description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+      //   technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
+      //   github_link: "https://github.com/smrkem/trackme"
+      // }
     ];
   }
 }

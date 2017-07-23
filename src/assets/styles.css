@@ -55,6 +55,29 @@ span.close-x {
   width: 18px;
   background: url(/assets/images/close-white.svg) no-repeat;
 }
+.course-title.in-progress .course-title-text {
+  margin-right: 30px;
+}
+span.in-progress-icon {
+  display: inline-block;
+  position: relative;
+  width: 105px;
+  height: 25px;
+  border: 1px solid #454545;
+  vertical-align: middle;
+}
+span.in-progress-icon::after {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  content: "IN PROGRESS";
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 0.3px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #595959;
+}
 
 
 /*
@@ -360,6 +383,11 @@ nav.expanded #menu-link .white-arrow {
   }
 }
 
+@media screen and (max-width: 912px) {
+  #projects-scroll {
+    left: 0 !important;
+  }
+}
 
 
 /*
@@ -535,4 +563,25 @@ a.course-info-button {
   font-size: 16px;
   line-height: 1.88;
   margin-top: 20px;
+}
+
+
+
+@media screen and (min-width: 912px) {
+  .course {
+    position: relative;
+  }
+  .course-title {
+    margin-right: 170px;
+  }
+  .course-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    text-align: right;
+  }
+  .course-info-provider-name {
+    margin-top: 12px;
+  }
 }
