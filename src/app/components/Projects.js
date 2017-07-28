@@ -65,7 +65,7 @@ export class Projects extends React.Component {
       },
       {
         name: "StockData",
-        description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
+        description: "I created this as a personal accounting of my learning process with combining docker, acceptance testing, \"outside-in TDD\" and mocking external services. It gets price history for a stock symbol and displays price and volume for the past year in a github contributions style graph.",
         technologies: ["Python (Flask)", "Python Data Analysis Library (Pandas)", "YahooFinanceAPI"],
         github_link: "https://github.com/smrkem/trackme"
       },

@@ -293,7 +293,7 @@ nav.expanded #menu-link .white-arrow {
 /* HIghlight hover effect
 /******************/
 #contact.main-content,
-#home.main-content {
+#home .main-content {
   transition: color .2s ease;
 }
 #contact .highlight,

@@ -51,7 +51,7 @@ export class Courses extends React.Component {
         status: "in-progress",
         provider: "Udemy",
         coursePage: "https://www.udemy.com/angular-on-rails-course",
-        review: "A fast-paced walkthrough for an Angular app that communicates with 2 different Rails API services. This course doesn't teach anything about Rails - it's only used to scaffold the APIs for the Angualr app. Not a bad introduction to Angular - but I found I had to constantly google for updated code as well as clearer explanations of the Angular concepts.",
+        review: "A fast-paced walkthrough for an Angular app that communicates with 2 different Rails API services. This course doesn't teach anything about Rails - it's only used to scaffold the APIs for the Angular app. Not a bad introduction to Angular - but I found I had to constantly google for updated code as well as clearer explanations of the Angular concepts.",
       },
       {
         title: "AWS Certified Solutions Architect",
@@ -89,7 +89,7 @@ export class Courses extends React.Component {
         syllabus: "https://courses.edx.org/courses/course-v1:Microsoft+DAT208x+5T2016/a83dfa3e93a34598987774b010e84043/",
         completionDate: "October 2016",
         certificateUrl: "https://courses.edx.org/certificates/509cce8ccf3743b8840a12152b342d79",
-        review: "This course helped me start to really know python. The instructor was great and while the labs (in DataCamp) had some issues - they were workable and decently challenging. The Numpy, Matplotlib and Pandas sections each gave a solid overview."
+        review: "This course helped me start to really know Python. The instructor was great and while the labs (in DataCamp) had some issues - they were workable and decently challenging. The Numpy, Matplotlib and Pandas sections each gave a solid overview."
       }
     ];
   }
