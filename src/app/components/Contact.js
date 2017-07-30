@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export class Contact extends React.Component {
   componentDidMount() {
@@ -19,6 +20,9 @@ export class Contact extends React.Component {
   render() {
     return(
       <div id="main-wr">
+        <Helmet>
+            <title>{ this.props.route.pageTitle }</title>
+        </Helmet>
         <div id="contact" className="main main-content">
           <p>Drop me a <span className="highlight highlight-pink">Message</span>.</p>
           <p>

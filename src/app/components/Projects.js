@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Project } from "./Project";
 
 export class Projects extends React.Component {
@@ -41,6 +42,9 @@ export class Projects extends React.Component {
     }
     return(
       <div id="main-wr">
+        <Helmet>
+            <title>{ this.props.route.pageTitle }</title>
+        </Helmet>
         <div className="projects-next-button" onClick={this.onIndexChange.bind(this)}>
           <span className="black-arrow"></span>
           <div className="next-project-name">

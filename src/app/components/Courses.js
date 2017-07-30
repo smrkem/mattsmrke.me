@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Course } from "./Course";
 import { CourseReview } from "./CourseReview";
 
@@ -32,6 +33,9 @@ export class Courses extends React.Component {
     });
     return(
       <div id="main-wr">
+        <Helmet>
+            <title>{ this.props.route.pageTitle }</title>
+        </Helmet>
         <div id="courses" className="main main-content">
           { coursesList }
         </div>
