@@ -51,10 +51,19 @@ export class Courses extends React.Component {
   getCourses() {
     return [
       {
-        title: "Angular 2 + Rails 5 Bootcamp",
+        title: "Angular 4 - The Complete Guide",
         status: "in-progress",
         provider: "Udemy",
+        coursePage: "https://www.udemy.com/the-complete-guide-to-angular-2/",
+        review: "I have yet to really start this course, but the instructor - Maximilian Schwarzmüller - is a fantastic teacher. I'm a fan of his youtube channel and his explanations are always thorough and clear.",
+      },
+      {
+        title: "Angular 2 + Rails 5 Bootcamp",
+        status: "completed",
+        provider: "Udemy",
         coursePage: "https://www.udemy.com/angular-on-rails-course",
+        completionDate: "August 2017",
+        certificateUrl: "https://www.udemy.com/certificate/UC-3EXL65O2",
         review: "A fast-paced walkthrough for an Angular app that communicates with 2 different Rails API services. This course doesn't teach anything about Rails - it's only used to scaffold the APIs for the Angular app. Not a bad introduction to Angular - but I found I had to constantly google for updated code as well as clearer explanations of the Angular concepts.",
       },
       {
