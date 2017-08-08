@@ -58,6 +58,14 @@ export class Courses extends React.Component {
         review: "I have yet to really start this course, but the instructor - Maximilian Schwarzmüller - is a fantastic teacher. I'm a fan of his youtube channel and his explanations are always thorough and clear.",
       },
       {
+        title: "AWS Lambda",
+        status: "completed",
+        provider: "A Cloud Guru",
+        coursePage: "https://acloud.guru/course/aws-lambda",
+        completionDate: "August 2017",
+        review: "This course did a great job of walking through some great introductory AWS Lambda projects. It covers an S3 upload, a Kinesis Stream input and a DynamoDB put and provides a solid overview of Lambda. All the content is there, but unfortunately it's not presented very well and there are some minor video editing issues.",
+      },
+      {
         title: "Angular 2 + Rails 5 Bootcamp",
         status: "completed",
         provider: "Udemy",

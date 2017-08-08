@@ -12,27 +12,27 @@ import { Contact } from "./components/Contact";
 class App extends React.Component {
 
   render() {
-    const siteName = " | Matt Smrke - Software Engineer";
+    const siteName = "Matt Smrke - Software Engineer";
     return(
       <Router history={browserHistory} >
         <Route path={"/"} component={Root} >
           <IndexRoute
-            pageTitle={ "Home" + siteName }
+            pageTitle={ siteName }
             component={Home}
           />
           <Route
             path={"courses"}
-            pageTitle={ "Courses" + siteName }
+            pageTitle={ "Courses | " + siteName }
             component={Courses}
           />
           <Route
             path={"projects"}
-            pageTitle={ "Projects" + siteName }
+            pageTitle={ "Projects | " + siteName }
             component={Projects}
           />
           <Route
             path={"contact"}
-            pageTitle={ "Contact" + siteName }
+            pageTitle={ "Contact | " + siteName }
             component={Contact}
           />
         </Route>
