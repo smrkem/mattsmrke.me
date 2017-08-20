@@ -2,8 +2,6 @@ import React from "react";
 
 export class Course extends React.Component {
   render() {
-    console.log(this.props);
-
     var coursePageLink = 'coursePage' in this.props ?
       <a target="_blank" href={this.props.coursePage}>Course Page</a> : "";
     var syllabusLink = 'syllabus' in this.props ?

@@ -25,7 +25,9 @@ export class CourseReview extends React.Component {
         </div>
         <div id="course-review-main">
           <h2 id="course-review-title">{ course.title }</h2>
-          <p id="course-review-review">{ course.review }</p>
+          <div id="course-review-review">{ course.review.split("\n").map((p,i) => {
+              return <p key={i}>{p}</p>;
+          })}</div>
         </div>
       </div>
     )

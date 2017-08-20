@@ -58,6 +58,14 @@ export class Courses extends React.Component {
         review: "I have yet to really start this course, but the instructor - Maximilian Schwarzmüller - is a fantastic teacher. I'm a fan of his youtube channel and his explanations are always thorough and clear.",
       },
       {
+        title: "Serverless For Beginners",
+        status: "completed",
+        provider: "A Cloud Guru",
+        coursePage: "https://acloud.guru/learn/serverless-for-beginners",
+        completionDate: "August 2017",
+        review: "This course provides a great introduction to serverless architecture. Mike (the instructor) is knowledgeable, friendly and engaging and does a good job with presenting the material. The project built throughout does a really good job of demonstrating serverless patterns and principles, and works great with a little bit of debugging using the code provided.\nThe course's major downside for me was that all of the code was simply provided and not really explained at all. So, for example, while the course demonstrates that you can generate a pre-singed url which can be used by a broser to upload a file directly to S3 - it does absolutely nothing to teach students specifically how to accomplish that task. It took time to go over all the code, googling when necessary, in order to really understand what was happening.",
+      },
+      {
         title: "AWS Lambda",
         status: "completed",
         provider: "A Cloud Guru",
