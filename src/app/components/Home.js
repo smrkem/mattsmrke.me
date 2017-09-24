@@ -1,6 +1,9 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+
+
+const siteName = "Matt Smrke - Software Engineer";
 
 export class Home extends React.Component {
   componentDidMount() {
@@ -19,10 +22,13 @@ export class Home extends React.Component {
     }
 
   render() {
+    // console.log("\n\n\n\n\n\n\n\n\n\n\n+++++++++++++++++\n\n\n\n\n\n\n\n\n\n")
+    // console.log('props:', this.props)
+    // console.log("\n\n\n\n\n\n\n\n\n\n\n+++++++++++++++++\n\n\n\n\n\n\n\n\n\n")
     return(
       <div id="main-wr">
         <Helmet>
-            <title>{ this.props.route.pageTitle }</title>
+            <title>{ siteName }</title>
         </Helmet>
         <div id="home" className="main">
           <div className="main-content">
