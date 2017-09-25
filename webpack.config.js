@@ -10,6 +10,9 @@ var config = {
     filename: "bundle.js",
     publicPath: "/app/"
   },
+  devServer: {
+    disableHostCheck: true
+  },
   module: {
     loaders: [
       {

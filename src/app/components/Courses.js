@@ -51,6 +51,15 @@ export class Courses extends React.Component {
   getCourses() {
     return [
       {
+        title: "Ruby on Rails 5, BDD, Rspec and Capybara",
+        status: "completed",
+        provider: "Udemy",
+        coursePage: "https://www.udemy.com/ruby-rails-5-bdd-rspec-capybara/",
+        completionDate: "September 2017",
+        certificateUrl: "https://www.udemy.com/certificate/UC-ZCICRGSN/",
+        review: "This course has 2 parts - an intro to rspec and a workout app. The first part of started well enough but ended up being disappointing. It introduces rspec and feature tests, but fails to include any other kinds of test (unit, controller, helper). When the author introduces ActionCable and real-time features - he skimps on explanations and ignores testing entirely.\nThe second part is an interesting app, but again - no unit tests and the real-time ActionCable stuff goes completely untested.",
+      },
+      {
         title: "Angular 4 - The Complete Guide",
         status: "in-progress",
         provider: "Udemy",
