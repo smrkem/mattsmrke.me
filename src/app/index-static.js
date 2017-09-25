@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-// import { StaticRouter, Route, IndexRoute } from "react-router";
-import { StaticRouter, Route, IndexRoute } from 'react-router-dom'
+import { StaticRouter, Route, BrowserRouter } from 'react-router-dom'
+import ReactDOM from 'react-dom'
 import { Helmet } from "react-helmet";
 
 import { Root } from "./components/Root";
@@ -70,36 +70,10 @@ export default locals => {
 }
 
 
-// class App extends React.Component {
+if (typeof document != 'undefined') {
+  ReactDOM.render(
+    <BrowserRouter>{Routes}</BrowserRouter>,
+    document.getElementById('app')
+  )
+}
 
-//   render() {
-//     const siteName = "Matt Smrke - Software Engineer";
-//     return(
-//       <Router history={browserHistory} >
-//         <Route path={"/"} component={Root} >
-//           <IndexRoute
-//             pageTitle={ siteName }
-//             component={Home}
-//           />
-//           <Route
-//             path={"courses"}
-//             pageTitle={ "Courses | " + siteName }
-//             component={Courses}
-//           />
-//           <Route
-//             path={"projects"}
-//             pageTitle={ "Projects | " + siteName }
-//             component={Projects}
-//           />
-//           <Route
-//             path={"contact"}
-//             pageTitle={ "Contact | " + siteName }
-//             component={Contact}
-//           />
-//         </Route>
-//       </Router>
-//     );
-//   }
-// }
-
-// render(<App/>, window.document.getElementById("app"));
