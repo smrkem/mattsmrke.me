@@ -51,6 +51,13 @@ export class Courses extends React.Component {
   getCourses() {
     return [
       {
+        title: "The Serverless Framework with GraphQL",
+        status: "in-progress",
+        provider: "A Cloud Guru",
+        coursePage: "https://acloud.guru/learn/serverless-with-graphql",
+        review: "Seems good so far. Hoping for deeper explanations on the core concepts of graphql. More coming soon...",
+      },
+      {
         title: "Ruby on Rails 5, BDD, Rspec and Capybara",
         status: "completed",
         provider: "Udemy",
