@@ -7,7 +7,7 @@ var config = {
   entry: SRC_DIR + "/app/index.js",
   output: {
     path: DIST_DIR + "/app",
-    filename: "bundle.js",
+    filename: "bundle-3892je.js",
     publicPath: "/app/"
   },
   devServer: {
