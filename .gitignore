@@ -1,6 +1,5 @@
 /node_modules
 /static
-/bundle.js
 npm-debug.log
 .DS_Store
 .env.private
