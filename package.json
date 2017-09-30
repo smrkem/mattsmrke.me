@@ -4,8 +4,8 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server  --content-base dist/ --host $IP --port $PORT",
-    "build": "rm -rf dist/ && webpack && cp src/index.html dist/index.html",
+    "start": "npm run build && webpack-dev-server  --content-base dist/ --host $IP --port $PORT",
+    "build": "rm -rf dist/ && webpack && cp src/index.html dist/index.html && cp -r src/assets dist/assets",
     "build:static": "rm -rf static/ && webpack -p --config=webpack.static.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.0",
     "normalize.css": "^7.0.0",
