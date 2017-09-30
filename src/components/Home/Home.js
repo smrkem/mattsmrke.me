@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { Link } from "react-router-dom";
 
 class Home extends React.Component {
@@ -20,6 +21,9 @@ class Home extends React.Component {
   render() {
     return(
       <div id="main-wr">
+        <Helmet>
+          <title>Matt Smrke - Software Engineer</title>
+        </Helmet>
         <div id="home" className="main">
           <div className="main-content">
             <p>

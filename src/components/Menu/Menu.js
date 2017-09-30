@@ -22,7 +22,7 @@ export class Menu extends React.Component {
           <span className="white-arrow"></span>
         </a>
         <NavLink id="home-link" to={"/"} onClick={this.onToggleMenu.bind(this)}><span>Matt Smrke</span></NavLink>
-        <NavLink id="courses-link"  to={"/courses"} activeClassName={"active"} onClick={this.onToggleMenu.bind(this)}><span>Courses</span></NavLink>
+        <NavLink id="courses-link"  to={"/learning"} activeClassName={"active"} onClick={this.onToggleMenu.bind(this)}><span>Learning</span></NavLink>
         <NavLink id="projects-link"  to={"/projects"} activeClassName={"active"} onClick={this.onToggleMenu.bind(this)}><span>Projects</span></NavLink>
         <NavLink id="contact-link"  to={"/contact"} activeClassName={"active"} onClick={this.onToggleMenu.bind(this)}><span>Contact</span></NavLink>
       </nav>

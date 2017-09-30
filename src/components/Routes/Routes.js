@@ -11,11 +11,10 @@ const Routes = () => (
   <div>
     <Menu />
     <Route path="/" exact component={Home} />
-    <Route path={"/courses"} component={Courses} />
+    <Route path={"/learning"} component={Courses} />
     <Route path={"/projects"} component={Projects} />
     <Route path={"/contact"} component={Contact} />
   </div>
 )
 
 export default Routes
-

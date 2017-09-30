@@ -15,14 +15,38 @@ const App = ({locals}) => (
   </StaticRouter>
 )
 
+const siteTitle = "Matt Smrke - Software Engineer"
+const description = "I'm a web developer in Toronto, Canada. I work with Rails, Django, Flask and am recently getting into Angular, React and serverless architectures."
+
+const paths = {
+  '/': {
+    title: siteTitle,
+    description: description,
+  },
+  '/projects': {
+    title: "My Projects | " + siteTitle,
+    description: description + " This is a sample of the projects I've built or am building."
+  },
+  '/learning': {
+    title: "Learning Resources | " + siteTitle,
+    description: description + " Here's a list of courses I've enrolled in and what I though of each."
+  },
+  '/contact': {
+    title: "Contact Me | " + siteTitle,
+    description: description + " Get in touch!"
+  }
+}
+
 module.exports = locals => {
-    const assets = Object.keys(locals.webpackStats.compilation.assets)
-    const templateProps = {
-      css: assets.filter(value => value.match(/\.css$/)),
-      js: assets.filter(value => value.match(/\.js$/)),
-      body: renderToString(<App locals={locals} />),
-    }
-    return `<!DOCTYPE html>${renderToStaticMarkup(<Template {...templateProps} />)}`
+  const assets = Object.keys(locals.webpackStats.compilation.assets)
+  const templateProps = {
+    css: assets.filter(value => value.match(/\.css$/)),
+    js: assets.filter(value => value.match(/\.js$/)),
+    body: renderToString(<App locals={locals} />),
+    title: paths[locals.path].title,
+    description: paths[locals.path].description
+  }
+  return `<!DOCTYPE html>${renderToStaticMarkup(<Template {...templateProps} />)}`
 }
 
 if (typeof document != 'undefined') {

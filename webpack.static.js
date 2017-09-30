@@ -42,7 +42,7 @@ module.exports = {
         paths: [
             '/',
             '/projects',
-            '/courses',
+            '/learning',
             '/contact'
         ],
         locals: { }

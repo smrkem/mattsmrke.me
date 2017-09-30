@@ -1,6 +1,7 @@
-import React from "react";
-import { Course } from "./Course";
-import { CourseReview } from "./CourseReview";
+import React from "react"
+import Helmet from "react-helmet"
+import { Course } from "./Course"
+import { CourseReview } from "./CourseReview"
 
 class Courses extends React.Component {
   constructor() {
@@ -32,6 +33,9 @@ class Courses extends React.Component {
     });
     return(
       <div id="main-wr">
+        <Helmet>
+          <title>Learning Resources | Matt Smrke - Software Engineer</title>
+        </Helmet>
         <div id="courses" className="main main-content">
           { coursesList }
         </div>

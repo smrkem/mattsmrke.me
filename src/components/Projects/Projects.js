@@ -1,5 +1,6 @@
-import React from "react";
-import { Project } from "./Project";
+import React from "react"
+import Helmet from "react-helmet"
+import { Project } from "./Project"
 
 class Projects extends React.Component {
   constructor() {
@@ -41,6 +42,9 @@ class Projects extends React.Component {
     }
     return(
       <div id="main-wr">
+        <Helmet>
+          <title>My Projects | Matt Smrke - Software Engineer</title>
+        </Helmet>
         <div className="projects-next-button" onClick={this.onIndexChange.bind(this)}>
           <span className="black-arrow"></span>
           <div className="next-project-name">
