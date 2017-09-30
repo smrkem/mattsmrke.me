@@ -11,7 +11,7 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].js',
+    filename: '[name].[chunkhash:6].js',
     path: DIST_DIR,
     libraryTarget: 'umd',
   },
@@ -35,7 +35,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'styles.css',
+      filename: 'styles.[chunkhash:6].css',
       allChunks: true
     }),
     new StaticSiteGeneratorPlugin({
