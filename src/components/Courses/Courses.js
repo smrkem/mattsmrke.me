@@ -36,7 +36,12 @@ class Courses extends React.Component {
         <Helmet>
           <title>Learning Resources | Matt Smrke - Software Engineer</title>
         </Helmet>
+
         <div id="courses" className="main main-content">
+          <div id="courses-intro">
+            <p>Here are the courses that I've completed or are currently enrolled in, and my thoughs on each.</p>
+          </div>
+          <hr />
           { coursesList }
         </div>
         <CourseReview

@@ -300,13 +300,15 @@ nav.expanded #menu-link .white-arrow {
 #home .highlight {
   cursor: pointer;
 }
-#contact.faded,
-#home.faded {
-  color: rgb(69,69,69);
-}
-#contact.faded .highlight:not(.hovered),
-#home.faded .highlight:not(.hovered) {
-  color: rgb(69,69,69);
+@media screen and (min-width: 912px) {
+  #contact.faded,
+  #home.faded {
+    color: rgb(69,69,69);
+  }
+  #contact.faded .highlight:not(.hovered),
+  #home.faded .highlight:not(.hovered) {
+    color: rgb(69,69,69);
+  }
 }
 
 
