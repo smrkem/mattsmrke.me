@@ -24,6 +24,9 @@ export class Course extends React.Component {
             <span className="course-info-button-icon"></span>
           </a>
         </div>
+        <div className="course-review-review-inner">{ this.props.review.split("\n").map((p,i) => {
+            return <p key={i}>{p}</p>;
+        })}</div>
         <div className="course-links">
           { coursePageLink }
           { syllabusLink }

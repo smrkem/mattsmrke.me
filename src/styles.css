@@ -505,7 +505,9 @@ a.course-info-button {
   margin-right: 20px;
   margin-bottom: 10px;
 }
-
+.course-review-review-inner {
+  display: none;
+}
 
 
 

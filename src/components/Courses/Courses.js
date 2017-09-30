@@ -7,7 +7,7 @@ class Courses extends React.Component {
     super();
     this.state = {
       courses: this.getCourses(),
-      reviewIndex: 1,
+      reviewIndex: null,
       showReview: false
     }
   }

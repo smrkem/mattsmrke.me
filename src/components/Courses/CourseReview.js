@@ -2,6 +2,9 @@ import React from "react";
 
 export class CourseReview extends React.Component {
   render() {
+    if (!this.props.course) {
+      return <div></div>
+    }
     let course = this.props.course;
     let completionDate = "completionDate" in course ?
       <div id="course-review-completed">

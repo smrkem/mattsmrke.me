@@ -7,7 +7,7 @@
     "start": "npm run build && webpack-dev-server  --content-base dist/",
     "startc9": "npm run build && webpack-dev-server  --content-base dist/ --host $IP --port $PORT",
     "build": "rm -rf dist/ && webpack && cp src/index.html dist/index.html && cp -r src/assets dist/assets",
-    "build:static": "rm -rf static/ && webpack -p --config=webpack.static.js",
+    "build:static": "rm -rf static/ && webpack -p --config=webpack.static.js && cp -r src/assets static/assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
