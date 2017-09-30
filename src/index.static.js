@@ -1,12 +1,19 @@
 import React from 'react'
+import { render } from 'react-dom'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
-
-
-import 'normalize.css'
-import './base.css'
-
+import { StaticRouter, BrowserRouter } from 'react-router-dom'
+import Routes from './components/Routes/Routes'
 import Template from './Template'
-import App from './components/App/App'
+
+
+import './reset.css'
+import './styles.css'
+
+const App = ({locals}) => (
+  <StaticRouter location={locals.path} context={{}}>
+    <Routes />
+  </StaticRouter>
+)
 
 module.exports = locals => {
     const assets = Object.keys(locals.webpackStats.compilation.assets)
@@ -18,9 +25,6 @@ module.exports = locals => {
     return `<!DOCTYPE html>${renderToStaticMarkup(<Template {...templateProps} />)}`
 }
 
-
-import { render } from 'react-dom'
-
 if (typeof document != 'undefined') {
-    render(<App />, document.getElementById('app'))
+    render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById('app'))
 }

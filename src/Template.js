@@ -5,7 +5,7 @@ const Template = (props) => {
     <html>
       <head>
         <title>Static Yo!</title>
-        <link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet" />
         {props.css.map(file => <link href={`/${file}`} rel="stylesheet" />)}
       </head>
       <body>

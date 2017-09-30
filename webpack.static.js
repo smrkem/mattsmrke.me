@@ -23,7 +23,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react']
+            presets: ['env', 'stage-2', 'react']
           }
         }
       },
@@ -41,9 +41,12 @@ module.exports = {
     new StaticSiteGeneratorPlugin({
         paths: [
             '/',
+            '/projects',
+            '/courses',
+            '/contact'
         ],
         locals: { }
     })
   ]
-      
+
 }
