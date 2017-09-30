@@ -61,6 +61,18 @@ class Projects extends React.Component {
   getProjects() {
     return [
       {
+        name: "NewsPost Classifier: Data Gatherer",
+        description: "a serverless React app backed by (python) AWS Lambdas. The user can search a news item and the top 10 recent search results get displayed, ready to be classified as 'spam' or 'good'. Labelled data is sent back to the API and stored in an s3 bucket for future machine learning.",
+        technologies: ["Python", "AWS API Gateway, Lambda, S3", "React, Webpack"],
+        github_link: "https://github.com/smrkem/stockdata2"
+      },
+      {
+        name: "ServerlessTube",
+        description: "a serverless video-sharing application. It has a basic front end that allows users to list and play videos, and authenticate to upload a video for automatic transcoding. This is the course project for the A Cloud Guru: Serverless For Beginners.",
+        technologies: ["AWS API Gateway, Lambda, S3, Elastic Transcoder", "Auth0", "Firebase", "jQuery"],
+        github_link: "https://github.com/smrkem/cloudguru-serverless-1"
+      },
+      {
         name: "TrackMe",
         description: "is a self-improvement app that allows you to set up weekly goals and track their completion. It also tracks different personal status attributes over time, such as mindfulness, diet, and physical activity.",
         technologies: ["Ruby on Rails", "AJAX"],

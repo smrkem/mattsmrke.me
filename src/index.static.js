@@ -37,6 +37,14 @@ const paths = {
   }
 }
 
+const gaTracking = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-54462999-2');
+`
+
 module.exports = locals => {
   const assets = Object.keys(locals.webpackStats.compilation.assets)
   const templateProps = {
@@ -44,7 +52,8 @@ module.exports = locals => {
     js: assets.filter(value => value.match(/\.js$/)),
     body: renderToString(<App locals={locals} />),
     title: paths[locals.path].title,
-    description: paths[locals.path].description
+    description: paths[locals.path].description,
+    gaTracking: gaTracking
   }
   return `<!DOCTYPE html>${renderToStaticMarkup(<Template {...templateProps} />)}`
 }
