@@ -39,7 +39,7 @@ class Courses extends React.Component {
 
         <div id="courses" className="main main-content">
           <div id="courses-intro">
-            <p>Here are the courses that I've completed or are currently enrolled in, and my thoughs on each.</p>
+            <p>Here are the courses that I've completed or are currently enrolled in, and my thoughts on each.</p>
           </div>
           <hr />
           { coursesList }
